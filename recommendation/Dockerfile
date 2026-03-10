@@ -18,6 +18,6 @@ COPY --from=builder /app/static ./static
 COPY --from=builder /app/templates ./templates
 COPY --from=builder /app/data ./data
 
-EXPOSE 8080
+EXPOSE 8082
 
 CMD ["./recommendation"]
