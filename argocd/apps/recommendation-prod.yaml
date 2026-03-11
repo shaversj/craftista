@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: recommendation-prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/shaversj/craftista
+    targetRevision: main
+    path: recommendation/k8s/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: prod
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
