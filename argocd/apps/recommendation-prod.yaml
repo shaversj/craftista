@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/shaversj/craftista
     targetRevision: main
-    path: recommendation/k8s/prod
+    path: recommendation/k8s/overlays/prod
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
