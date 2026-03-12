@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: recommendation
-          image: ghcr.io/shaversj/craftista/recommendation:sha-33b8d8d
+          image: ghcr.io/shaversj/craftista/recommendation:sha-18d8e21
