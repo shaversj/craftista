@@ -69,5 +69,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git config user.name "github-actions"
           git add envs/dev/recommendation/version.yaml
-          git commit -m "Update recommendation image tag to sha-${SHORT_SHA}"
+          git commit -m "Update recommendation image tag to sha-${SHORT_SHA} [skip ci]"
           git push
