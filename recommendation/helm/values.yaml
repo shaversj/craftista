@@ -2,11 +2,7 @@ replicas: 1
 
 image:
   repository: ghcr.io/shaversj/craftista/recommendation
-<<<<<<< HEAD
-  tag: sha-e0f6d50
-=======
   tag: latest
->>>>>>> 607c076 (Update helm + workflow)
   pullPolicy: Always
 
 service:
