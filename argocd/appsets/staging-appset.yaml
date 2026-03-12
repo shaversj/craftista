@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: staging
+  namespace: argocd
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - git:
+        repoURL: https://github.com/shaversj/craftista
+        revision: HEAD
+        directories:
+          - path: envs/staging/*
+  template:
+    metadata:
+      name: '{{index .path.segments 2}}-staging'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/shaversj/craftista
+        targetRevision: HEAD
+        path: '{{.path.path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: staging
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
