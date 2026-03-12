@@ -1,4 +1,4 @@
 replicas: 1
 
 image:
-  tag: latest
+  tag: sha-bd857e7
