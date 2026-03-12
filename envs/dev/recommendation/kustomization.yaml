@@ -3,8 +3,6 @@ kind: Kustomization
 namespace: dev
 resources:
   - ../../../base/recommendation
-components:
-  - ../../../variants/non-prod/recommendation
 patches:
   - path: version.yaml
   - path: replicas.yaml
