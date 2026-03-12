@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation
+spec:
+  template:
+    spec:
+      containers:
+        - name: recommendation
+          image: ghcr.io/shaversj/craftista/recommendation:latest

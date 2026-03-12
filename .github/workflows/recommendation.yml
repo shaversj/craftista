@@ -61,13 +61,13 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Update image tag in values-dev.yaml
+      - name: Update image tag in dev version.yaml
         if: github.event_name != 'pull_request'
         run: |
           SHORT_SHA=${GITHUB_SHA::7}
-          sed -i "s|tag:.*|tag: sha-${SHORT_SHA}|" recommendation/helm/values-dev.yaml
+          sed -i "s|image:.*|image: ghcr.io/shaversj/craftista/recommendation:sha-${SHORT_SHA}|" envs/dev/recommendation/version.yaml
           git config user.email "github-actions@github.com"
           git config user.name "github-actions"
-          git add recommendation/helm/values-dev.yaml
+          git add envs/dev/recommendation/version.yaml
           git commit -m "Update recommendation image tag to sha-${SHORT_SHA}"
           git push

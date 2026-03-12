@@ -8,11 +8,7 @@ spec:
   source:
     repoURL: https://github.com/shaversj/craftista
     targetRevision: main
-    path: recommendation/helm
-    helm:
-      valueFiles:
-        - values.yaml
-        - values-dev.yaml
+    path: envs/dev/recommendation
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
