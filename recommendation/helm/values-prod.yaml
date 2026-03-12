@@ -1,5 +1,8 @@
 replicas: 3
 
+image:
+  tag: latest
+
 resources:
   requests:
     cpu: 250m
