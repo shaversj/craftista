@@ -8,5 +8,5 @@ spec:
   selector:
     app: voting
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 8333
+      targetPort: 8333
