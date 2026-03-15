@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting
+spec:
+  template:
+    spec:
+      containers:
+        - name: voting
+          image: ghcr.io/shaversj/craftista/voting:latest
