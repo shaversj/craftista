@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: voting
-          image: ghcr.io/shaversj/craftista/voting:sha-08642f5
+          image: ghcr.io/shaversj/craftista/voting:sha-fca7921
