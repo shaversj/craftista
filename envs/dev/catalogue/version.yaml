@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: catalogue
-          image: ghcr.io/shaversj/craftista/catalogue:latest
+          image: ghcr.io/shaversj/craftista/catalogue:sha-2a434d6
